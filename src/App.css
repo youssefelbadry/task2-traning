@@ -365,6 +365,9 @@ strong {
 .left-cont-body{
   display: none;
 }
+.cont-body{
+ margin-bottom: 400px; 
+}
 .search{
   display: flex;
   justify-content: space-between;
@@ -376,9 +379,14 @@ strong {
   margin-top: 15px;
   width: 100%;
 }
-
+.right-cont-body p{
+  padding: 10px 0px;
+}
   .words-footer {
     display: block;
+  }
+  .footer{
+    margin-top: 500px;
   }
   .footer ul li {
     display: block;

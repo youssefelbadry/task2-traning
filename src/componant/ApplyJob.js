@@ -1,86 +1,9 @@
-// import GetJobsData from "../Data/GetJobsData";
 import React, { useState } from "react";
 import logo from "../image/seff_logo_transparent.png";
 import Header from "./HeaderPages";
 import Gethobdata from "../Data/GetJobsData";
-import ApplyJob from "../componant/ApplyJob";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
-function GetJobs() {
-  const navigate = useNavigate();
 
-  function movetoCreatejop(e) {
-    e.preventDefault();
-    navigate("/apply-job"); // Navigate to the JobForm page
-  }
-  <Router>
-    <Routes>
-      <Route path="/" element={<Header />} />
-      <Route path="/apply-job" element={<ApplyJob />} />
-    </Routes>
-  </Router>;
-  const JobItem = Gethobdata.map((item) => {
-    return (
-      <div>
-        <div className="tob-cont">
-          <div className="tob-cont-1">
-            <div>
-              <span>
-                {" "}
-                <i
-                  class="fas fa-sliders-h"
-                  style={{ fontSize: "40px", color: "red", fontWeight: "bold" }}
-                >
-                  {" "}
-                  IT{" "}
-                </i>
-              </span>
-              <h3> {item.title}</h3>
-
-              <p>{item.detTitle}</p>
-            </div>
-            <div>
-              <p>{item.p1}</p>
-              <p>
-                <i
-                  className="fas fa-map-marker-alt"
-                  style={{ color: "#bf9b30", fontSize: "20px" }}
-                ></i>{" "}
-                {item.p2}
-              </p>
-            </div>
-          </div>
-
-          <div className="tob-cont-2 mt-4">
-            <div>{item.conP2}</div>
-            <div className="tob-cont-button mt-4">
-              <button className="btn btn-outline-warning">React JS</button>{" "}
-              <button className="btn btn-outline-warning">Development</button>
-            </div>
-          </div>
-
-          <div className="tob-cont-1 mt-4">
-            <div>
-              <span>
-                <i className="far fa-clock" style={{ fontSize: "20px" }}></i>{" "}
-                {item.time}
-              </span>
-            </div>
-            <div>
-              <button className="btn btn-warning" onClick={movetoCreatejop}>
-                VIEW DETAILS
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  });
-
+function ApplyJob() {
   // ===============================================
   const [location, setLocation] = useState("Cairo");
   const [jobType, setJobType] = useState({
@@ -272,9 +195,110 @@ function GetJobs() {
                 </button>
               </div>
 
-              <div className="col-lg-8 right-cont-body">{JobItem}</div>
+              <div className="col-lg-8 right-cont-body">
+                <div>
+                  <div className="tob-cont">
+                    <div className="tob-cont-1">
+                      <div className="q">
+                        <span>
+                          {" "}
+                          <i
+                            class="fas fa-sliders-h"
+                            style={{
+                              fontSize: "40px",
+                              color: "red",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            {" "}
+                            IT{" "}
+                          </i>
+                        </span>
+                        <h3> Front-end React JS Developer</h3>
+
+                        <p>Eptikar IT Solutions, Obour City</p>
+                      </div>
+                      <div>
+                        <p>5000 EGP - 8000 EGP</p>
+                        <p>
+                          <i
+                            className="fas fa-map-marker-alt"
+                            style={{ color: "#bf9b30", fontSize: "20px" }}
+                          ></i>{" "}
+                          On Site
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="tob-cont-2 mt-4">
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </div>
+                      <div className="tob-cont-button mt-4">
+                        <button className="btn btn-outline-warning">
+                          React JS
+                        </button>{" "}
+                        <button className="btn btn-outline-warning">
+                          Development
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="tob-cont-1 mt-4">
+                      <div>
+                        <span>
+                          <i
+                            className="far fa-clock"
+                            style={{ fontSize: "20px" }}
+                          ></i>{" "}
+                          2 h ago
+                        </span>
+                      </div>
+                      
+                    </div>
+                    <div className="mt-4">
+                      <h4>About us</h4>
+                      <p>
+                        At vero eos et accusamus et lusto odio dignissimos
+                        ducimus qui blanditiis praesentium voluptatum deleniti
+                        atque corrupti quos dolores
+                      </p>
+                    </div>
+                    <div className="mt-4 y-2">
+                      <h4>Job Description</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </p>
+                    </div>
+                    <div className="mt-4">
+                      <h4>Job Requirements</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </p>
+                    </div>
+                    <div style={{marginLeft:"auto"}}>
+                        <button className="btn px-5" style={{backgroundColor:"#bf9b30"}}>
+                          APPLY
+                        </button>
+                      </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
           <div className="footer">
             <div className="foot-logo">
               <img
@@ -352,4 +376,4 @@ function GetJobs() {
   );
 }
 
-export default GetJobs;
+export default ApplyJob;
