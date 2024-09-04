@@ -3,13 +3,8 @@ import React, { useState } from "react";
 import logo from "../image/seff_logo_transparent.png";
 import Header from "./HeaderPages";
 import Gethobdata from "../Data/GetJobsData";
-import ApplyJob from "../componant/ApplyJob";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import {useNavigate,} from "react-router-dom";
+
 function GetJobs() {
   const navigate = useNavigate();
 
@@ -17,12 +12,7 @@ function GetJobs() {
     e.preventDefault();
     navigate("/apply-job"); // Navigate to the JobForm page
   }
-  <Router>
-    <Routes>
-      <Route path="/" element={<Header />} />
-      <Route path="/apply-job" element={<ApplyJob />} />
-    </Routes>
-  </Router>;
+  
   const JobItem = Gethobdata.map((item) => {
     return (
       <div>
@@ -43,7 +33,7 @@ function GetJobs() {
 
               <p>{item.detTitle}</p>
             </div>
-            <div>
+            <div className="price-course">
               <p>{item.p1}</p>
               <p>
                 <i

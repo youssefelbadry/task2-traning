@@ -2,15 +2,8 @@ import React, { useState } from "react";
 import logo from "../image/seff_logo_transparent.png";
 import Header from "./HeaderPages";
 import Gethobdata from "../Data/GetJobsData";
-import {useNavigate,} from "react-router-dom";
-
-function ApplyJob() {
-  const navigate = useNavigate();
-
-  function movetoSubmitjop(e) {
-    e.preventDefault();
-    navigate("/submit-job"); // Navigate to the JobForm page
-  }
+import { useNavigate } from "react-router-dom";
+function SubmitJob() {
   // ===============================================
   const [location, setLocation] = useState("Cairo");
   const [jobType, setJobType] = useState({
@@ -238,68 +231,92 @@ function ApplyJob() {
                     </div>
 
                     <div className="tob-cont-2 mt-4">
-                      <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                      <div className="mx-4">
+                        <h2 className="form-title">Balqees Hamdi Sabir</h2>
+                        <p className="form-subtitle">
+                          Computer science, International Islamic University
+                        </p>
                       </div>
-                      <div className="tob-cont-button mt-4">
-                        <button className="btn btn-outline-warning">
-                          React JS
-                        </button>{" "}
-                        <button className="btn btn-outline-warning">
-                          Development
-                        </button>
+                      <div className="tob-cont-inputs mt-4">
+                        <div
+                          className="form-group-email"
+                          
+                        >
+                          <label>Email</label>
+                          <input
+                            type="email"
+                            className="form-control"
+                            placeholder="Enter your email"
+                          />
+                        </div>
+
+                        <div className="form-group-number">
+                          <label>Years Of Experience</label>
+                          <input
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter your experience"
+                          />
+                        </div>
                       </div>
                     </div>
 
-                    <div className="tob-cont-1 mt-4">
-                      <div>
-                        <span>
-                          <i
-                            className="far fa-clock"
-                            style={{ fontSize: "20px" }}
-                          ></i>{" "}
-                          2 h ago
-                        </span>
+                    <div
+                      className="tob-cont-inputs mt-4"
+                      style={{ justifyContent: "start" }}
+                    >
+                      <div
+                        className="form-group-mobile"
+                       
+                      >
+                        <label>Mobile Number</label>
+                        <input
+                          type="tel"
+                          className="form-control"
+                          placeholder="Enter your mobile number"
+                        />
                       </div>
+                    </div>
+                    <div className="mt-5 mx-4 y-2">
+                      <div className="form-group">
+                        <label>Upload CV</label>
+                        <div className="upload-container">
+                          <div className="upload-box">
+                            <i className="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p style={{ color: "white" }}>
+                              Drag & drop files or{" "}
+                              <a href="#" style={{ color: "#bf9b30" }}>
+                                Browse
+                              </a>
+                            </p>
+                            <small style={{ color: "gray" }}>
+                              Supported formats: JPEG, PNG, GIF, MP4, PDF, PSD,
+                              AI, Word, PPT
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="mt-5 buutt"
                       
+                    >
+                      <button
+                        type="button"
+                        className="btn px-5"
+                        style={{ backgroundColor: "gray", color:"white" }}
+                      >
+                        CANCEL
+                      </button>
+                      <button
+                        type="submit"
+                        className="btn px-5"
+                        style={{ backgroundColor: "#bf9b30" }}
+                      >
+                        SUBMIT
+                      </button>
                     </div>
-                    <div className="mt-4">
-                      <h4>About us</h4>
-                      <p>
-                        At vero eos et accusamus et lusto odio dignissimos
-                        ducimus qui blanditiis praesentium voluptatum deleniti
-                        atque corrupti quos dolores
-                      </p>
-                    </div>
-                    <div className="mt-4 y-2">
-                      <h4>Job Description</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                    <div className="mt-4">
-                      <h4>Job Requirements</h4>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
-                    </div>
-                    <div style={{marginLeft:"auto"}}>
-                        <button className="btn px-5" style={{backgroundColor:"#bf9b30"}} onClick={movetoSubmitjop}>
-                          APPLY
-                        </button>
-                      </div>
                   </div>
                 </div>
               </div>
@@ -383,4 +400,4 @@ function ApplyJob() {
   );
 }
 
-export default ApplyJob;
+export default SubmitJob;

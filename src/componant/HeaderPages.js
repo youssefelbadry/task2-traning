@@ -10,8 +10,8 @@ function HeaderPages() {
             <img
               src={logo}
               title="logo"
-              height="40px"
-              width="50px"
+              height="100px"
+              width="100px"
               alt="Logo"
             />
           </a>
