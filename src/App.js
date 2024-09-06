@@ -8,6 +8,7 @@ import { Fragment } from 'react';
 import SubmitJob from './componant/SubmitJob';
 import Profile from './componant/Profile';
 import EditProfile from './componant/EditProfile';
+import Exam from './componant/Exam';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/submit-job" element={<SubmitJob/>} />
       <Route path="/profile" element={<Profile/>} />
       <Route path="/edit-profile" element={<EditProfile/>} />
+      <Route path="/exam" element={<Exam/>} />
     </Routes>
     </Fragment>
   );

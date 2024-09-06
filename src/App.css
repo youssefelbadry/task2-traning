@@ -496,7 +496,7 @@ label {
   padding: 10px 15px;
   border-radius: 5px;
 }
-
+/* ======================EDITPROFILE================================= */
 .about-section {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
@@ -575,7 +575,67 @@ label {
   padding: 10px 5px;
   border-radius: 5px;
 }
+.exam-contact-body{
+  margin-top: 100px;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+}
+.content {
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
 
+.content div {
+  padding: 20px;
+ 
+  margin: auto;
+}
+.letter-3{
+  width: 26.5%;
+}
+.content span {
+  color: #bf9b30;
+}
+.head {
+  margin-top: 90px;
+}
+.letter-5{
+  visibility: hidden;
+}
+.next {
+  display: flex;
+  justify-content: end;
+  margin: 20px 10px;
+}
+
+.next1 .page-item {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.next1 .page-item .page-link {
+  color: #bf9b30;
+}
+
+.next1 .page-item.active .page-link {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.next1 .page-link {
+  border: none;
+}
+
+.next1 .page-link:hover {
+  background-color: rgba(38, 36, 36, 0.8);
+  color: white;
+}
 /* ============================================================= */
 
 @media (max-width: 912px) {
@@ -694,6 +754,38 @@ label {
   text-align: center;
   align-items: center;
   margin-bottom: 40px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 30px;
+}
+.content div {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+.letter-5 button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #bf9b30;
+  color: white;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 0;
+}
+.letter--5 button{
+  width: 100%;
+  padding: 10px 15px;
+  background-color:gray;
+  color: white;
+  border-radius: 10px;
+  font-size: 17px;
+  border: 0;
+}
+.letter-5{
+  visibility: visible;
 }
 
 }
